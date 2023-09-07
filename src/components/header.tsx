@@ -10,7 +10,7 @@ import { cn } from "@src/lib/utils"
 
 export function Header() {
   return (
-    <header className="border-b">
+    <header>
       <Shell className="md:py-6 flex justify-between items-center max-w-6xl">
 
         <Link href="/">
