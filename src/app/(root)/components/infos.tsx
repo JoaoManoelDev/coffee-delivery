@@ -10,9 +10,16 @@ export function Infos() {
   return (
     <div className="flex flex-col">
       <div className="space-y-5">
-        <h1 className={cn('text-3xl md:text-5xl leading-tight font-bold', baloo.className)}>
+        <h1
+          className={
+            cn(
+              'text-3xl md:text-5xl leading-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-violet-400 to-violet-600',
+              baloo.className
+            )
+          }>
           Encontre o café perfeito para qualquer hora do dia
         </h1>
+
         <p className="text-base md:text-lg leading-relaxed max-w-lg">
           Com o Coffee Delivery você recebe seu café onde estiver, a
           qualquer hora
