@@ -11,7 +11,7 @@ import { cn } from "@src/lib/utils"
 export function Header() {
   return (
     <header className="border-b">
-      <Shell className="md:py-6 max-w-6 xl flex justify-between items-center max-w-6xl">
+      <Shell className="md:py-6 flex justify-between items-center max-w-6xl">
 
         <Link href="/">
           <Image
@@ -27,8 +27,8 @@ export function Header() {
           <div
             className={cn(buttonVariants({ variant: 'outline' }), 'space-x-1 text-violet-700 bg-violet-600/20 hover:text-violet-700 hover:bg-violet-600/20 border-none')}
           >
-            <MapPin className="w-5 h-5" />
-            <span className="">Rio de Janeiro, RJ</span>
+            <MapPin className="w-4 h-4 md:w-5 md:h-5" />
+            <span className="text-xs md:text-base">Rio de Janeiro, RJ</span>
           </div>
 
           <Link href="/complete-order" className="relative">
@@ -38,7 +38,7 @@ export function Header() {
               >
                 1
               </span>
-              <ShoppingCart className="w-5 h-5 text-yellow-700" />
+              <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-yellow-700" />
             </Button>
           </Link>
         </div>
