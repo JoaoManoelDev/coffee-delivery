@@ -1,9 +1,14 @@
 import { Hero } from "./components/hero"
+import { OurCoffees } from "./components/our-coffees"
 
 export default function Home() {
   return (
-    <div className="bg-[url('/intro-background.png')] object-fill bg-no-repeat bg-cover bg-center">
-      <Hero />
+    <div className="space-y-5">
+      <div className="bg-[url('/intro-background.png')] bg-no-repeat bg-cover bg-center">
+        <Hero />
+      </div>
+
+      <OurCoffees />
     </div>
   )
 }

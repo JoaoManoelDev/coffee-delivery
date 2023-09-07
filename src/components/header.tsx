@@ -10,9 +10,8 @@ import { cn } from "@src/lib/utils"
 
 export function Header() {
   return (
-    <header>
+    <header className="fixed top-0 left-0 right-0 m-auto bg-background/50 backdrop-blur-lg">
       <Shell className="md:py-6 flex justify-between items-center max-w-6xl">
-
         <Link href="/">
           <Image
             alt="logo"
@@ -20,6 +19,7 @@ export function Header() {
             width={85}
             height={40}
             priority={true}
+            className="bg-no-repeat bg-cover"
           />
         </Link>
 
