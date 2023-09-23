@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin, ShoppingCart } from "lucide-react"
@@ -8,9 +11,17 @@ import { Shell } from "@src/components/shell"
 import { Button, buttonVariants } from "@src/components/ui/button"
 import { cn } from "@src/lib/utils"
 
+import { useCoffeeStore } from "@src/store/coffee-store"
+
 export function Header() {
+  const { cartCoffee, loadCartCoffees } = useCoffeeStore()
+
+  useEffect(() => {
+    loadCartCoffees()
+  }, [loadCartCoffees])
+
   return (
-    <header className="fixed top-0 left-0 right-0 m-auto bg-background/50 backdrop-blur-lg">
+    <header className="fixed top-0 left-0 right-0 m-auto bg-background/50 backdrop-blur-lg z-50">
       <Shell className="md:py-6 flex justify-between items-center max-w-6xl">
         <Link href="/">
           <Image
@@ -25,18 +36,18 @@ export function Header() {
 
         <div className="space-x-3">
           <div
-            className={cn(buttonVariants({ variant: 'outline' }), 'space-x-1 text-violet-700 bg-violet-600/20 hover:text-violet-700 hover:bg-violet-600/20 border-none')}
+            className={cn(buttonVariants({ variant: 'outline' }), 'space-x-1 text-primary bg-primary/20 hover:text-primary hover:bg-primary/20 border-none')}
           >
             <MapPin className="w-4 h-4 md:w-5 md:h-5" />
             <span className="text-xs md:text-base">Rio de Janeiro, RJ</span>
           </div>
 
           <Link href="/complete-order" className="relative">
-            <Button variant="outline" size="icon" className="bg-yellow-600/20 hover:bg-yellow-600/30 border-none">
+            <Button variant="outline" size="icon" className="bg-yellow-500/20 hover:bg-yellow-500/30 border-none">
               <span
-                className="absolute w-5 h-5 bg-yellow-600 rounded-full -top-6 -right-3 text-white text-xs flex justify-center items-center z-10"
+                className="absolute w-5 h-5 bg-yellow-500 rounded-full -top-6 -right-3 text-secondary text-xs flex justify-center items-center z-10"
               >
-                1
+                {cartCoffee.length}
               </span>
               <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-yellow-700" />
             </Button>
