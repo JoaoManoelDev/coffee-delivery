@@ -13,7 +13,7 @@ export function Infos() {
         <h1
           className={
             cn(
-              'text-center xl:text-left text-3xl md:text-5xl leading-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-violet-400 to-violet-600',
+              'text-center xl:text-left text-3xl md:text-5xl leading-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-violet-500 to-violet-600',
               baloo.className
             )
           }>
