@@ -36,7 +36,7 @@ export default function OrderConfirmed() {
           <div className="h-full w-full p-9 bg-background rounded-bl-[37px] rounded-br-[7px] rounded-tr-[37px] rounded-tl-[7px] space-y-8 flex flex-col justify-center">
             <div className="flex items-center gap-3">
               <div className="bg-primary w-8 h-8 rounded-full flex items-center justify-center">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4 text-background" />
               </div>
               <div className="flex flex-col leading-5">
                 <span>Entrega em {orderCoffeeInfo.street}</span>
@@ -46,7 +46,7 @@ export default function OrderConfirmed() {
 
             <div className="flex items-center gap-3 ">
               <div className="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4 text-background" />
               </div>
               <div className="flex flex-col leading-5">
                 <span>Previsão de entrega</span>
@@ -56,7 +56,7 @@ export default function OrderConfirmed() {
 
             <div className="flex items-center gap-3">
               <div className="bg-yellow-600 w-8 h-8 rounded-full flex items-center justify-center">
-                <DollarSign className="w-4 h-4" />
+                <DollarSign className="w-4 h-4 text-background" />
               </div>
               <div className="flex flex-col leading-5">
                 <span>Pagamento na entrega</span>

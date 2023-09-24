@@ -42,18 +42,19 @@ export function SelectedCoffees() {
         {cartCoffee.map(coffee => (
           <div key={coffee.id}>
             <div className="flex justify-between">
-              <div className="flex gap-4 ">
-                <Image
-                  src={`/coffees/${coffee.photo}`}
-                  alt=""
-                  width={60}
-                  height={60}
-                  quality={100}
-                  priority={true}
-                />
-
+              <div className="flex gap-4">
+                <div className='w-14'>
+                  <Image
+                    src={`/coffees/${coffee.photo}`}
+                    alt=""
+                    width={80}
+                    height={80}
+                    quality={100}
+                    priority={true}
+                  />
+                </div>
                 <div className="flex flex-col gap-2">
-                  <span>{coffee.name}</span>
+                  <span className='w-32 leading-4'>{coffee.name}</span>
 
                   <div className="flex gap-1">
                     <CoffeeInput
@@ -69,13 +70,13 @@ export function SelectedCoffees() {
                       onClick={() => removeCoffeeToCart(coffee.id)}
                     >
                       <Trash2 className="w-4 h-4" />
-                      Remove
+                      <span className='hidden sm:block'>Remove</span>
                     </Button>
                   </div>
                 </div>
               </div>
 
-              <p>{priceFormatter.format(coffee.price * coffee.quantity / 100)}</p>
+              <p className='font-bold leading-4'>{priceFormatter.format(coffee.price * coffee.quantity / 100)}</p>
             </div>
 
             <Separator className="mt-5" />
