@@ -12,7 +12,7 @@ import { CoffeeInput } from "./coffee-input"
 import { priceFormatter } from "@src/utils/formatter"
 import { cn } from '@src/lib/utils'
 
-const DELIVERY_PRICE = 350 // 3,50
+const DELIVERY_PRICE = 350 // 350 * 100 = 3,50
 const baloo = Baloo_2({ subsets: ['latin'] })
 
 export function SelectedCoffees() {
@@ -54,7 +54,7 @@ export function SelectedCoffees() {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className='w-32 leading-4'>{coffee.name}</span>
+                  <span className='w-32 md:w-44 leading-4'>{coffee.name}</span>
 
                   <div className="flex gap-1">
                     <CoffeeInput
