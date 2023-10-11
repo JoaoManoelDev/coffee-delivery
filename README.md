@@ -24,6 +24,12 @@ Hospedagem: <a href="https://dev-coffeedelivery.vercel.app/" target="_blank">Cof
 - <a href="https://zod.dev/" target="_blank">Zod</a>
 - <a href="https://zustand-demo.pmnd.rs/" target="_blank">Zustand</a>
 
+## :white_check_mark: Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é recomendado ter um editor para trabalhar com o código como: [VSCode](https://code.visualstudio.com/).
+
 ## :game_die: Rodando o app
 
 ```bash
