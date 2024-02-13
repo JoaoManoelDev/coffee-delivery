@@ -34,7 +34,7 @@ export function Header() {
           />
         </Link>
 
-        <div className="space-x-3">
+        <div className="flex space-x-3">
           <div
             className={cn(buttonVariants({ variant: 'outline' }), 'space-x-1 text-primary bg-primary/20 hover:text-primary hover:bg-primary/20 border-none px-2')}
           >
@@ -45,7 +45,7 @@ export function Header() {
           <Link href="/complete-order" className="relative">
             <Button variant="outline" size="icon" className="bg-yellow-500/20 hover:bg-yellow-500/30 border-none px-2">
               <span
-                className="absolute w-5 h-5 bg-yellow-500 rounded-full -top-6 -right-3 text-secondary text-xs flex justify-center items-center z-10"
+                className="absolute w-5 h-5 bg-yellow-500 rounded-full -top-2 -right-2 text-secondary text-xs flex justify-center items-center z-10"
               >
                 {cartCoffee.length}
               </span>
